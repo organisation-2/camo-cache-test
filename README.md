@@ -14,3 +14,6 @@ Engineering-related documents
 
 ![local][localimg]
 [localimg]: http://10.1.1.9/test/Duckling-under-water.jpg
+
+
+<a href="http://example.com/" target="_blank">Hello, world!</a>
