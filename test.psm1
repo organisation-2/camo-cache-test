@@ -4,3 +4,8 @@
 Function Make-SomeChanges {
 	[CmdletBinding(DefaultParameterSetName='NoSave')]
 }
+
+param 
+    (
+        [Parameter(Mandatory=$false,ParameterSetName='NoSave')]
+	)
