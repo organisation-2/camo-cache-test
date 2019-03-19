@@ -1,4 +1,4 @@
 ---
-name: "Colon: colon :duck:"
+name: "Colon: colon " :duck:
 about: All about colons
 ---
