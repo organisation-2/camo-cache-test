@@ -1,27 +1,9 @@
 workflow "New workflow" {
-  on = "push"
-  resolves = [
-    "deploy",
-    "stage",
-  ]
+  resolves = "new-action"
+  on = "pull_request"
 }
 
-action "Filters for GitHub Actions" {
+action "new-action" {
   uses = "actions/bin/filter@master"
-  args = "branch master"
-}
-
-action "Filters for GitHub Actions-1" {
-  uses = "actions/bin/filter@master"
-  args = "branch develop"
-}
-
-action "deploy" {
-  uses = "deploy"
-  needs = ["Filters for GitHub Actions"]
-}
-
-action "stage" {
-  uses = "stage"
-  needs = ["Filters for GitHub Actions-1"]
+  args = "merged true"
 }
